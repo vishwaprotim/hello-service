@@ -45,5 +45,3 @@ jobs:
           context: .
           push: true
           tags: public.ecr.aws/l3k0v7k2/helloapi:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
