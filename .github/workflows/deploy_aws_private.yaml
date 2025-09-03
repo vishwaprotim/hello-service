@@ -1,9 +1,9 @@
-name: Push Image to AWS ECR Public Repository
+name: Push Image to AWS ECR Private Repository
 
 on:
   push:
     branches:
-      - main
+      - feature/aws-private
 
 jobs:
   deploy:
@@ -33,17 +33,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: Login to Amazon ECR Public
-        id: login-ecr-public
+      - name: Login to Amazon ECR
+        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
-        with:
-          registry-type: public
 
-      - name: Build and push Docker image to ECR Public
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: public.ecr.aws/l3k0v7k2/helloapi:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          tags: ${{ steps.login-ecr.outputs.registry }}/helloapi:latest
