@@ -1,15 +1,15 @@
-package com.protim.rest.helloservice.service;
+package com.protim.rest.helloapi.service;
 
-import com.protim.rest.helloservice.dao.BasicResponse;
+import com.protim.rest.helloapi.dao.BasicResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @Service
-public class ResponseManager {
+public class ResponseService {
 
     public String defaultMessage(){
-        return "Welcome to Hello Service";
+        return "Welcome to Hello API";
     }
 
     public BasicResponse sayHelloToName(String name){

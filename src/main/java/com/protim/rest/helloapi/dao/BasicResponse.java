@@ -1,4 +1,4 @@
-package com.protim.rest.helloservice.dao;
+package com.protim.rest.helloapi.dao;
 
 
 import lombok.Builder;

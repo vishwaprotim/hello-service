@@ -1,4 +1,4 @@
-package com.protim.rest.helloservice;
+package com.protim.rest.helloapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

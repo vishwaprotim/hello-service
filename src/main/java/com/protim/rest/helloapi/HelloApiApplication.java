@@ -1,13 +1,13 @@
-package com.protim.rest.helloservice;
+package com.protim.rest.helloapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloServiceApplication {
+public class HelloApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloServiceApplication.class, args);
+		SpringApplication.run(HelloApiApplication.class, args);
 	}
 
 }
